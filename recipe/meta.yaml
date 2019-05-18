@@ -1,5 +1,5 @@
 {% set name = "symfit" %}
-{% set version = "0.4.6" %}
+{% set version = "0.5.0" %}
 
 package:
   name: "{{ name|lower }}"
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 431e5c0ae835eda1f40c5935ac13c108c03d9dbf8aed342c20fe627e2094996e
+  sha256: 77c0f6456f6d056a4b6f549bb3ac7c6347c729797ad6325465ffd530a984ef96
 
 build:
-  number: 1000
+  number: 0
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
   
 requirements:
