@@ -23,6 +23,7 @@ requirements:
     - scipy >=1.0,<1.2
     - sympy >=1.2
     - six
+    - toposort
     - funcsigs  # [py2k]
     - functools32  # [py2k]
 
