@@ -15,8 +15,8 @@ build:
   
 requirements:
   host:
-    - pip
     - python
+    - pip
     - pbr >=1.9
   run:
     - python
@@ -43,3 +43,4 @@ about:
 extra:
   recipe-maintainers:
     - tbuli
+    - jhsmit
