@@ -1,16 +1,15 @@
-{% set name = "symfit" %}
-{% set version = "0.4.6" %}
+{% set version = "0.5.1" %}
 
 package:
-  name: "{{ name|lower }}"
+  name: symfit
   version: "{{ version }}"
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 431e5c0ae835eda1f40c5935ac13c108c03d9dbf8aed342c20fe627e2094996e
+  url: https://pypi.io/packages/source/s/symfit/symfit-{{ version }}.tar.gz
+  sha256: 02381f00f2f183ade2d7b665e120ace7aab84c4e6b3b25615134e4235fa303d6
 
 build:
-  number: 1000
+  number: 0
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
   
 requirements:
@@ -21,7 +20,7 @@ requirements:
   run:
     - python
     - numpy >=1.12
-    - scipy >=1.0
+    - scipy >=1.0,<1.2
     - sympy >=1.2
     - six
     - funcsigs  # [py2k]
