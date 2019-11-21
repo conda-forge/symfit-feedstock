@@ -9,7 +9,7 @@ source:
   sha256: 7fc5f7c9b93b883bcf693276ae56953ff5c0a59b864a14c03b4e1a82d0e5a1fe
 
 build:
-  number: 0
+  number: 1
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
   
 requirements:
@@ -20,7 +20,7 @@ requirements:
   run:
     - python
     - numpy >=1.12
-    - scipy >=1.0,<1.2
+    - scipy >=1.0
     - sympy >=1.2
     - six
     - toposort
