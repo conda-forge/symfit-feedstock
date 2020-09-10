@@ -23,7 +23,7 @@ requirements:
     - sympy >=1.2
     - six
     - toposort
-    - pkg_resources
+    - setuptools
     
 test:
   imports:
