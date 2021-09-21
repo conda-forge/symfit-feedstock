@@ -14,11 +14,11 @@ build:
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 requirements:
   host:
-    - python
+    - python >=3.6
     - pip
     - pbr >=1.9
   run:
-    - python
+    - python >=3.6
     - numpy >=1.12
     - scipy >=1.0
     - sympy >=1.2
