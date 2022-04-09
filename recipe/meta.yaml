@@ -1,4 +1,4 @@
-{% set version = "0.5.4" %}
+{% set version = "0.5.5" %}
 
 package:
   name: symfit
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/s/symfit/symfit-{{ version }}.tar.gz
-  sha256: 9d74340144dc68f3c7870dc6adb44cd18070021e5804b30e142cd0ab35bb3d26
+  sha256: 7e6cfcdc4593747b21086818d43762c543300d8d04f1d2c6f41ae7c7e5763455
 
 build:
   number: 0
@@ -22,7 +22,6 @@ requirements:
     - numpy >=1.12
     - scipy >=1.0
     - sympy >=1.2
-    - six
     - toposort
     - setuptools
     
