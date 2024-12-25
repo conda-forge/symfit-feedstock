@@ -5,20 +5,20 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/s/symfit/symfit-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/s/symfit/symfit-{{ version }}.tar.gz
   sha256: b8c97aa96f7e4a385adf8e22d532712e12be4ef845ec18b817e45efdc69eadf4
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 requirements:
   host:
-    - python >=3.7
+    - python {{ python_min }}
     - pip
     - pbr >=1.9
   run:
-    - python >=3.7
+    - python >={{ python_min }}
     - numpy >=1.12
     - scipy >=1.0
     - sympy >=1.2
@@ -26,6 +26,8 @@ requirements:
     - setuptools
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - symfit
 
